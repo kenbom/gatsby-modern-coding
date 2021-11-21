@@ -5,7 +5,7 @@ import Logo from "../assets/img/logo.svg"
 export default function Home() {
   return (
   <div>
-  <img src="../assets/img/logo.svg" alt="logo"></img>
+  <img src={Logo} alt="logo"></img>
   <Div>Hello world!</Div>
   </div>
   )
