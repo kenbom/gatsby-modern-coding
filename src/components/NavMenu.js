@@ -6,9 +6,9 @@ const NavMenu = () => {
     return (
         <div>
             <Sul>
-                <li><Link to="">ホーム</Link> </li>
-                <li><Link to="">サービス案内</Link> </li>
-                <li><Link to="">お問い合わせ</Link> </li>
+                <li><Link to="">Home</Link> </li>
+                <li><Link to="">Services</Link> </li>
+                <li><Link to="">Contact</Link> </li>
             </Sul>
         </div>
     )
