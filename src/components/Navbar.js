@@ -15,8 +15,9 @@ const Navbar = () => {
 }
 
 const Sdiv = styled.div`
-display: flex;
-justify-content: space-between;
-align-items: baseline;
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: 1fr;
+  align-items: baseline;
 `
 export default Navbar
