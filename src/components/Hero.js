@@ -9,8 +9,8 @@ const Hero = () => {
       <Ssection>
         <Simg>
           <StaticImage
-            //src="../assets/img/DSC00350.jpg"
-            src={HeroImg}
+            src="../assets/img/DSC00350.jpg"
+            //src={HeroImg}
             alt="coco"
             placeholder="blurred"
           />
