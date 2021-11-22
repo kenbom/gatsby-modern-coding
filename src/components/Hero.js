@@ -6,19 +6,16 @@ import { StaticImage } from "gatsby-plugin-image"
 const Hero = () => {
   return (
     <>
-      <StaticImage
-        src="../assets/img/DSC00350.jpg"
-        alt="coco"
-        placeholder="blurred"
-      />
       <Ssection>
-        {/* <Simg>
+        <Simg>
           <StaticImage
+            //src="../assets/img/DSC00350.jpg"
             src={HeroImg}
             alt="coco"
             placeholder="blurred"
           />
-          </Simg> */}
+        </Simg>
+
         <Sdiv>
           <Sp>Don't</Sp>
           <Sp>get me</Sp>
@@ -31,13 +28,19 @@ const Hero = () => {
 
 const Ssection = styled.section`
   display: grid;
-  grid-template-rows: 650px;
+  grid-template-rows: 1fr;
 `
-const Simg = styled.img`
+// const Simg = styled.img`
+//   grid-area: 1/1;
+//   width: 100%;
+//   height: 100%;
+//   object-fit: cover;
+// `
+const Simg = styled.span`
   grid-area: 1/1;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+ 
 `
 const Sdiv = styled.div`
   grid-area: 1/1;
@@ -45,10 +48,12 @@ const Sdiv = styled.div`
   display: grid;
   align-content: center;
   justify-items: center;
+ 
 `
 const Sp = styled.p`
-  color: gray;
-  font-size: 4rem;
-  margin: -10px;
+  color: white;
+  font-size: 6vw;
+  margin: -1vw;
+  z-index: 100;
 `
 export default Hero
