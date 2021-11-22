@@ -1,14 +1,28 @@
 import React from "react"
 import styled from "styled-components"
-import HeroImg from "../assets/img/hero.jpg"
+import HeroImg from "../assets/img/DSC00350.jpg"
+import { StaticImage } from "gatsby-plugin-image"
 
 const Hero = () => {
   return (
     <>
+      <StaticImage
+        src="../assets/img/DSC00350.jpg"
+        alt="coco"
+        placeholder="blurred"
+      />
       <Ssection>
+        {/* <Simg>
+          <StaticImage
+            src={HeroImg}
+            alt="coco"
+            placeholder="blurred"
+          />
+          </Simg> */}
         <Sdiv>
-          <Sp>Sleepy</Sp>
-          <Sp>Cats</Sp>
+          <Sp>Don't</Sp>
+          <Sp>get me</Sp>
+          <Sp>wrong....</Sp>
         </Sdiv>
       </Ssection>
     </>
@@ -16,21 +30,25 @@ const Hero = () => {
 }
 
 const Ssection = styled.section`
-  background-image: url(${HeroImg});
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  height: 600px;
+  display: grid;
+  grid-template-rows: 650px;
+`
+const Simg = styled.img`
+  grid-area: 1/1;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 `
 const Sdiv = styled.div`
+  grid-area: 1/1;
+  height: 100%;
   display: grid;
   align-content: center;
   justify-items: center;
-  height: 100%;
 `
 const Sp = styled.p`
   color: gray;
-  font-size: 3rem;
-  margin: 2px;
+  font-size: 4rem;
+  margin: -10px;
 `
 export default Hero
