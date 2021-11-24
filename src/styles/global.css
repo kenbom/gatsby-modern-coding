@@ -207,7 +207,7 @@ button,
 button:hover,
 .btn:hover {
   color: var(--white);
-  background: var(--primary-700);
+  background: rgba(0, 0, 0, 0.57);
   box-shadow: var(--shadow-2);
 }
 button.small {

@@ -16,9 +16,12 @@ const Sbtn = styled.button`
   background: transparent;
   background-color: transparent;
   border: none;
-  font-size: 24px;
+  font-size: 18px;
   cursor: pointer;
   color: rgba(0, 0, 0, 0.57);
+  @media(min-width:768px){
+    display: none;
+  }
 `
 
 export default NavBtn

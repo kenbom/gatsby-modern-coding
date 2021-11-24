@@ -7,7 +7,7 @@ import NavBtn from "./NavBtn"
 const Navbar = () => {
     return (
         <Sdiv>
-            <img src={Logo} alt="logo"></img> 
+            <img src={Logo} alt="logo" width="150px"></img> 
             <NavMenu></NavMenu>
             <NavBtn></NavBtn>
         </Sdiv>
@@ -19,5 +19,7 @@ const Sdiv = styled.div`
   grid-auto-flow: column;
   grid-template-columns: 1fr;
   align-items: baseline;
+
+  }
 `
 export default Navbar

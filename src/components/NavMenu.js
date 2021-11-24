@@ -17,11 +17,17 @@ const NavMenu = () => {
 export default NavMenu
 
 const Sul = styled.ul`
-display: flex;
-flex-direction: row;
-justify-content: space-between;
-align-items: center;
-column-gap: 20px;
-list-style: none;
-font-size: 0.8rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 20px;
+  list-style: none;
+  font-size: 1rem;
+  @media (max-width: 768px) {
+      display: none;
+  }
+`
+const Sui= styled.li`
+font-size: 5vw;
 `
