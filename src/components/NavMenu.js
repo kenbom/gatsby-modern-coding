@@ -1,11 +1,14 @@
-import React from "react"
+import React, {useState} from "react"
 import { Link } from "gatsby"
 import styled from "styled-components"
 
 const NavMenu = () => {
+  const [state, setState]=useState(true)
+  // const ButtonOnclick = setState(!state)
   return (
     <div>
-      <Sul showMlink>
+      <Sul direction={state}>
+        {/* <Sul> */}
         <li>
           <Link to="">Home</Link>{" "}
         </li>
@@ -16,6 +19,9 @@ const NavMenu = () => {
           <Link to="">Contact</Link>{" "}
         </li>
       </Sul>
+      <button onClick={()=> {setState(!state)}}>
+        click, me
+      </button>
     </div>
   )
 }
@@ -24,17 +30,12 @@ export default NavMenu
 
 const Sul = styled.ul`
   display: flex;
-  flex-direction: row;
+  flex-direction: ${props => props.direction? "column":"row"};
   justify-content: space-between;
   align-items: center;
   column-gap: 20px;
   list-style: none;
   font-size: 1rem;
-
-  &[showMlink="true"] {
-    flex-direction: column;
-    font-size: 3rem;
-  }
 
   @media (max-width: 768px) {
     display: none;
