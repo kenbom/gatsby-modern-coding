@@ -1,7 +1,7 @@
 import React, {useState} from "react"
 import { Link } from "gatsby"
 import styled from "styled-components"
-
+import { FaAlignRight } from "react-icons/fa"
 const NavMenu = () => {
   const [state, setState]=useState(true)
   // const ButtonOnclick = setState(!state)
@@ -19,9 +19,14 @@ const NavMenu = () => {
           <Link to="">Contact</Link>{" "}
         </li>
       </Sul>
-      <button onClick={()=> {setState(!state)}}>
+      {/* <button onClick={()=> {setState(!state)}}>
         click, me
-      </button>
+      </button> */}
+      <div>
+      <Sbtn type="button" onClick={()=> {setState(!state)}}>
+        <FaAlignRight />
+      </Sbtn>
+    </div>
     </div>
   )
 }
@@ -43,4 +48,15 @@ const Sul = styled.ul`
 `
 const Sui = styled.li`
   font-size: 5vw;
+`
+const Sbtn = styled.button`
+  background: transparent;
+  background-color: transparent;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  color: rgba(0, 0, 0, 0.57);
+  @media(min-width:768px){
+    display: none;
+  }
 `
