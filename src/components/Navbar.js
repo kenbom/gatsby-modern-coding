@@ -9,7 +9,6 @@ const Navbar = () => {
         <Sdiv>
             <img src={Logo} alt="logo" width="150px"></img> 
             <NavMenu></NavMenu>
-            {/* <NavBtn></NavBtn> */}
         </Sdiv>
     )
 }

@@ -1,32 +1,33 @@
-import React, {useState} from "react"
+import React, { useState } from "react"
 import { Link } from "gatsby"
 import styled from "styled-components"
 import { FaAlignRight } from "react-icons/fa"
 const NavMenu = () => {
-  const [state, setState]=useState(true)
+  const [state, setState] = useState(true)
   // const ButtonOnclick = setState(!state)
   return (
     <div>
-      <Sul direction={state}>
-        {/* <Sul> */}
+      <div>
+        <Sbtn
+          type="button"
+          onClick={() => {
+            setState(!state)
+          }}
+        >
+          <FaAlignRight />
+        </Sbtn>
+      </div>
+      <Sul show={state}>
         <li>
-          <Link to="">Home</Link>{" "}
+          <Link to="">Happy end</Link>{" "}
         </li>
         <li>
-          <Link to="">Services</Link>{" "}
+          <Link to="">Angry end</Link>{" "}
         </li>
         <li>
-          <Link to="">Contact</Link>{" "}
+          <Link to="">Marvel end</Link>{" "}
         </li>
       </Sul>
-      {/* <button onClick={()=> {setState(!state)}}>
-        click, me
-      </button> */}
-      <div>
-      <Sbtn type="button" onClick={()=> {setState(!state)}}>
-        <FaAlignRight />
-      </Sbtn>
-    </div>
     </div>
   )
 }
@@ -34,16 +35,22 @@ const NavMenu = () => {
 export default NavMenu
 
 const Sul = styled.ul`
-  display: flex;
-  flex-direction: ${props => props.direction? "column":"row"};
-  justify-content: space-between;
+  display: ${props => (props.show ? "none" : "flex")};
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
   align-items: center;
-  column-gap: 20px;
   list-style: none;
   font-size: 1rem;
-
-  @media (max-width: 768px) {
-    display: none;
+  }
+ @media(min-width:768px){
+    display: flex;
+    flex-direction: row; 
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 20px;
+    list-style: none;
+    font-size: 1rem;
   }
 `
 const Sui = styled.li`
@@ -56,7 +63,7 @@ const Sbtn = styled.button`
   font-size: 18px;
   cursor: pointer;
   color: rgba(0, 0, 0, 0.57);
-  @media(min-width:768px){
+  @media (min-width: 768px) {
     display: none;
   }
 `
