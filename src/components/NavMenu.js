@@ -19,13 +19,13 @@ const NavMenu = () => {
       </div>
       <Sul show={state}>
         <li>
-          <Link to="">Happy end</Link>{" "}
+          <Link to="/cat-peace">Happy end</Link>{" "}
         </li>
         <li>
-          <Link to="">Angry end</Link>{" "}
+          <Link to="/cat-angry">Angry end</Link>{" "}
         </li>
         <li>
-          <Link to="">Marvel end</Link>{" "}
+          <Link to="/cat-joker">Marvel end</Link>{" "}
         </li>
       </Sul>
     </div>
