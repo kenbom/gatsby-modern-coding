@@ -3,6 +3,7 @@ import styled from "styled-components"
 import Navbar from "../components/Navbar"
 import Hero from "../components/Hero"
 import Sleepies from "../components/Sleepies"
+import Footer from "../components/Footer"
 //import Logo from "../assets/img/logo.svg"
 
 export default function Home() {
@@ -11,6 +12,7 @@ export default function Home() {
   <Navbar></Navbar>
   <Hero></Hero>
   <Sleepies></Sleepies>
+  <Footer></Footer>
   </div>
   )
 }

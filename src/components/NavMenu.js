@@ -19,13 +19,44 @@ const NavMenu = () => {
       </div>
       <Sul show={state}>
         <li>
-          <Link to="/cat-peace">Happy end</Link>{" "}
+          <Link
+            to="/"
+            onClick={() => {
+              setState(!state)
+            }}
+          >
+            Home
+          </Link>
         </li>
         <li>
-          <Link to="/cat-angry">Angry end</Link>{" "}
+          <Link
+            to="/cat-peace"
+            onClick={() => {
+              setState(!state)
+            }}
+          >
+            Happy End
+          </Link>
         </li>
         <li>
-          <Link to="/cat-joker">Marvel end</Link>{" "}
+          <Link
+            to="/cat-angry"
+            onClick={() => {
+              setState(!state)
+            }}
+          >
+            Angry End
+          </Link>{" "}
+        </li>
+        <li>
+          <Link
+            to="/cat-joker"
+            onClick={() => {
+              setState(!state)
+            }}
+          >
+            Marvely End
+          </Link>{" "}
         </li>
       </Sul>
     </div>
@@ -42,7 +73,13 @@ const Sul = styled.ul`
   align-items: center;
   list-style: none;
   font-size: 1rem;
+  animation: hoge 0.6s ease;
   }
+
+@keyframes hoge {
+  0% {height: 0px;}
+  100% {height: 200px;}
+}
  @media(min-width:768px){
     display: flex;
     flex-direction: row; 
@@ -63,6 +100,7 @@ const Sbtn = styled.button`
   font-size: 18px;
   cursor: pointer;
   color: rgba(0, 0, 0, 0.57);
+  margin-left: 50px;
   @media (min-width: 768px) {
     display: none;
   }

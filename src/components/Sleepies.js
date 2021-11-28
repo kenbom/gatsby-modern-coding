@@ -31,7 +31,7 @@ const Sleepies = () => {
           {/* <GatsbyImage src={catZero} alt="sleepy0"></GatsbyImage> */}
         </figure>
       </Sarticle>
-      <Sarticle>
+      <Rarticle>
         <div>
           <Sh2>{sleepyContents[1].title}</Sh2>
           <p>{sleepyContents[1].text}</p>
@@ -44,7 +44,7 @@ const Sleepies = () => {
           ></StaticImage>
           {/* <StaticImage src={sleepyContents[0].image} alt="sleepy0"></StaticImage> */}
         </figure>
-      </Sarticle>
+      </Rarticle>
     </>
   )
 }
@@ -66,6 +66,10 @@ flex-direction: column;
 @media(min-width: 768px){
 flex-direction: row; 
 }
-
+`
+const Rarticle = styled(Sarticle)`
+  @media (min-width: 768px) {
+    flex-direction: row-reverse;
+  }
 `
 export default Sleepies

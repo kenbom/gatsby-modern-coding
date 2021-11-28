@@ -2,14 +2,15 @@ import React from 'react'
 import Logo from "../assets/img/nekohigeLogoEn.svg"
 import NavMenu from "./NavMenu"
 import styled from 'styled-components'
-import NavBtn from "./NavBtn"
 
 const Navbar = () => {
     return (
+      <>
         <Sdiv>
-            <img src={Logo} alt="logo" width="150px"></img> 
-            <NavMenu></NavMenu>
+          <img src={Logo} alt="logo" width="150px"></img>
+          <NavMenu></NavMenu>
         </Sdiv>
+      </>
     )
 }
 
