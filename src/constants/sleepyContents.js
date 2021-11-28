@@ -11,7 +11,7 @@ const sleepyContents = [
   {
     id: 2,
     //icon: <FaSketch className="service-icon" />,
-    title: "Me, too. off course.",
+    title: "Me, too.",
     text: `I'm baby meditation tofu chillwave, distillery messenger bag thundercats chicharrones kale chips gochujang. Banh mi direct trade marfa salvia.`,
     image: "../assets/img/DSC00080.jpg",
   },
