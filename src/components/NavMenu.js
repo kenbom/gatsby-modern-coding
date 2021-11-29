@@ -35,7 +35,7 @@ const NavMenu = () => {
               setState(!state)
             }}
           >
-            Happy End
+            HappyEnd
           </Link>
         </li>
         <li>
@@ -45,7 +45,17 @@ const NavMenu = () => {
               setState(!state)
             }}
           >
-            Angry End
+            AngryEnd
+          </Link>{" "}
+        </li>
+        <li>
+          <Link
+            to="/cat-bossy"
+            onClick={() => {
+              setState(!state)
+            }}
+          >
+            BossyEnd
           </Link>{" "}
         </li>
         <li>
@@ -55,7 +65,7 @@ const NavMenu = () => {
               setState(!state)
             }}
           >
-            Marvely End
+            MarvelyEnd
           </Link>{" "}
         </li>
       </Sul>
